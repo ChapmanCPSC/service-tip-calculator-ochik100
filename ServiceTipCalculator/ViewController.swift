@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+	
+    @IBOutlet weak var totalPrice: UITextField!
+    @IBOutlet var serviceQuality: UIPickerView!
+    
+    var qualityPicker : [Int] = [Int]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        qualityPicker = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,5 +28,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func calculateServiceTip(sender: AnyObject) {
+        
+    }
+    
+    
+    
 }
 

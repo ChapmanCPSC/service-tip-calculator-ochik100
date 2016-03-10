@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ServiceTipCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,41 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-np-JZb">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VSL-Q9-8zn">
+                                <rect key="frame" x="252" y="266" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="KHw-Bv-gyK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4V-KN-Mn3">
+                                <rect key="frame" x="255" y="304" width="90" height="30"/>
+                                <state key="normal" title="Calculate Tip"/>
+                                <connections>
+                                    <action selector="calculateServiceTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6N-pX-vyf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t4V-KN-Mn3" firstAttribute="centerX" secondItem="VSL-Q9-8zn" secondAttribute="centerX" id="7CO-cN-qpf"/>
+                            <constraint firstItem="HeQ-np-JZb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CXZ-m0-ZdH"/>
+                            <constraint firstAttribute="trailing" secondItem="HeQ-np-JZb" secondAttribute="trailing" id="J0S-P6-ZSm"/>
+                            <constraint firstItem="HeQ-np-JZb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h2H-Bu-VR5"/>
+                            <constraint firstItem="t4V-KN-Mn3" firstAttribute="top" secondItem="VSL-Q9-8zn" secondAttribute="bottom" constant="8" symbolic="YES" id="h7l-gT-Aiz"/>
+                            <constraint firstItem="VSL-Q9-8zn" firstAttribute="centerX" secondItem="HeQ-np-JZb" secondAttribute="centerX" id="m6E-P0-rah"/>
+                            <constraint firstItem="VSL-Q9-8zn" firstAttribute="top" secondItem="HeQ-np-JZb" secondAttribute="bottom" constant="50" id="nHt-1U-XlL"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="totalPrice" destination="VSL-Q9-8zn" id="c6d-Rb-Ghf"/>
+                        <outletCollection property="serviceQuality" destination="HeQ-np-JZb" collectionClass="NSMutableArray" id="oAm-fW-c7Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

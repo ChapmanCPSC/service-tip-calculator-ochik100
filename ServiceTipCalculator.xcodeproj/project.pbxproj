@@ -97,8 +97,8 @@
 		A20C6B201C911D85005D7623 /* ServiceTipCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				A20C6B211C911D85005D7623 /* AppDelegate.swift */,
 				A20C6B231C911D85005D7623 /* ViewController.swift */,
+				A20C6B211C911D85005D7623 /* AppDelegate.swift */,
 				A20C6B251C911D85005D7623 /* Main.storyboard */,
 				A20C6B281C911D85005D7623 /* Assets.xcassets */,
 				A20C6B2A1C911D85005D7623 /* LaunchScreen.storyboard */,
@@ -484,6 +484,7 @@
 				A20C6B481C911D85005D7623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20C6B491C911D85005D7623 /* Build configuration list for PBXNativeTarget "ServiceTipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +493,7 @@
 				A20C6B4B1C911D85005D7623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A20C6B4C1C911D85005D7623 /* Build configuration list for PBXNativeTarget "ServiceTipCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +502,7 @@
 				A20C6B4E1C911D85005D7623 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
